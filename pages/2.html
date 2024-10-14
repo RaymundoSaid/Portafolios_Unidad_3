@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar Color de Fondo</title>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <button id="colorButton">Cambiar Color de Fondo</button>
+
+    <script>
+        function getRandomColor() {
+            let color = '#';
+            const hexCharacters = '0123456789ABCDEF';
+            for (let i = 0; i < 6; i++) {
+                color += hexCharacters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        document.getElementById('colorButton').addEventListener('click', function() {
+            document.body.style.backgroundColor = getRandomColor();
+        });
+    </script>
+</body>
+</html>

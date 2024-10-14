@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronómetro Rococó</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0e6ef;
+            margin: 0;
+            background-image: url('https://example.com/rococo-pattern.jpg'); /* Reemplaza con una URL de tu elección */
+        }
+        .container {
+            background-color: #fff7f3;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            border: 2px solid #d4b8c1;
+        }
+        .time {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #7a5560;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 1rem;
+            color: #fff;
+            background-color: #c68a94;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #a66775;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cronómetro Rococó</h1>
+        <div class="time" id="time">00:00:00</div>
+        <button onclick="start()">Iniciar</button>
+        <button onclick="pause()">Pausar</button>
+        <button onclick="reset()">Reiniciar</button>
+    </div>
+
+    <script>
+        let seconds = 0;
+        let interval = null;
+
+        function updateTime() {
+            seconds++;
+            const hrs = Math.floor(seconds / 3600);
+            const mins = Math.floor((seconds % 3600) / 60);
+            const secs = seconds % 60;
+
+            document.getElementById('time').innerText = 
+                `${hrs.toString().padStart(2, '0')}:${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+        }
+
+        function start() {
+            if (!interval) {
+                interval = setInterval(updateTime, 1000);
+            }
+        }
+
+        function pause() {
+            clearInterval(interval);
+            interval = null;
+        }
+
+        function reset() {
+            pause();
+            seconds = 0;
+            document.getElementById('time').innerText = '00:00:00';
+        }
+    </script>
+</body>
+</html>

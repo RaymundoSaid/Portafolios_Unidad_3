@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Suma</title>
+    <script>
+        // Función para sumar los dos números ingresados por el usuario
+        function sumarNumeros() {
+            // Obtener los valores de los campos de entrada
+            var churpia1 = parseFloat(document.getElementById('churpia1').value);
+            var churpia2 = parseFloat(document.getElementById('churpia2').value);
+            
+            // Calcular la suma
+            var caquita = churpia1 + churpia2;
+            
+            // Mostrar el resultado en el campo de resultado
+            document.getElementById('caquita').value = caquita;
+        }
+    </script>
+</head>
+<body>
+    <h1>Formulario de Suma</h1>
+    <form>
+        <!-- Campo de entrada para el primer número -->
+        <label for="churpia1">Churpia 1:</label>
+        <input type="number" id="churpia1" name="churpia1"><br><br>
+        
+        <!-- Campo de entrada para el segundo número -->
+        <label for="churpia2">Churpia 2:</label>
+        <input type="number" id="churpia2" name="churpia2"><br><br>
+        
+        <!-- Botón para realizar la suma -->
+        <button type="button" onclick="sumarNumeros()">Sumar</button><br><br>
+        
+        <!-- Campo de resultado para mostrar la suma -->
+        <label for="caquita">Caquita:</label>
+        <input type="text" id="caquita" name="caquita" readonly><br><br>
+    </form>
+</body>
+</html>

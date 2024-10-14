@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertidor de Unidades</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .input-group {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+        label {
+            margin-right: 10px;
+            width: 100px;
+            text-align: right;
+        }
+        input {
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Convertidor de Unidades</h1>
+        <div class="input-group">
+            <label for="metros">Metros:</label>
+            <input type="number" id="metros" placeholder="Metros" oninput="convertir('metros')" step="1">
+        </div>
+        <div class="input-group">
+            <label for="kilometros">Kilómetros:</label>
+            <input type="number" id="kilometros" placeholder="Kilómetros" oninput="convertir('kilometros')" step="1">
+        </div>
+        <div class="input-group">
+            <label for="millas">Millas:</label>
+            <input type="number" id="millas" placeholder="Millas" oninput="convertir('millas')" step="1">
+        </div>
+    </div>
+
+    <script>
+        function convertir(unidad) {
+            const metros = document.getElementById('metros');
+            const kilometros = document.getElementById('kilometros');
+            const millas = document.getElementById('millas');
+
+            let valorMetros, valorKilometros, valorMillas;
+
+            switch (unidad) {
+                case 'metros':
+                    valorMetros = parseInt(metros.value) || 0;
+                    valorKilometros = valorMetros / 1000;
+                    valorMillas = valorMetros / 1609;
+                    break;
+                case 'kilometros':
+                    valorKilometros = parseInt(kilometros.value) || 0;
+                    valorMetros = valorKilometros * 1000;
+                    valorMillas = valorKilometros / 1.609;
+                    break;
+                case 'millas':
+                    valorMillas = parseInt(millas.value) || 0;
+                    valorMetros = valorMillas * 1609;
+                    valorKilometros = valorMillas * 1.609;
+                    break;
+            }
+
+            metros.value = valorMetros;
+            kilometros.value = valorKilometros;
+            millas.value = valorMillas;
+        }
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                document.getElementById('metros').value = '';
+                document.getElementById('kilometros').value = '';
+                document.getElementById('millas').value = '';
+            }
+        });
+    </script>
+</body>
+</html>
+

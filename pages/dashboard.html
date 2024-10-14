@@ -1,0 +1,610 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>
+    Proyecto Unidad 3
+  </title>
+  <!--     La api stosa     -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+  <!-- Los Iconos -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+  <!-- La mera wuena -->
+  <link id="pagestyle" href="../assets/css/material-dashboard.css?v=3.1.0" rel="stylesheet" />
+
+</head>
+
+<body class="g-sidenav-show  bg-gray-200">
+  <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-dark" id="sidenav-main">
+    <div class="sidenav-header">
+      <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
+        <a class="navbar-brand m-0"  target="_blank">
+        <img src="../assets/img/logo-ct.png" class="navbar-brand-img h-100" alt="main_logo">
+        <span class="ms-1 font-weight-bold text-white">Portafolio Unoidad 3</span>
+      </a>
+    </div>
+    <hr class="horizontal light mt-0 mb-2">
+    <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link text-white active bg-gradient-primary" href="../pages/dashboard.html">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">dashboard</i>
+            </div>
+            <span class="nav-link-text ms-1">Actividades</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white " href="../pages/billing.html">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">receipt_long</i>
+            </div>
+            <span class="nav-link-text ms-1">Contacto</span>
+          </a>
+        <li class="nav-item">
+          <a class="nav-link text-white " href="../pages/profile.html">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">person</i>
+            </div>
+            <span class="nav-link-text ms-1">Sobre Mi</span>
+          </a>
+      </ul>
+    </div>
+  </aside>
+  <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+    <!-- Donde ando   -->
+    <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur" data-scroll="true">
+      <div class="container-fluid py-1 px-3">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
+            <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Pages</a></li>
+            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Actividades</li>
+          </ol>
+          <h6 class="font-weight-bolder mb-0">Actividades</h6>
+        </nav>
+      </div>
+    </nav>
+     <!-- Del 1 al 4 -->
+    <div class="col-12 mt-4">
+      <div class="mb-5 ps-3">
+        <h6 class="mb-1">Actividades Unidad 3</h6>
+        <p class="text-sm">Actividades</p>
+      </div>
+      <div class="row">
+        <div class="col-xl-3 col-md-6 mb-xl-0 mb-4">
+          <div class="card card-blog card-plain">
+            <div class="card-header p-0 mt-n4 mx-3">
+              <a class="d-block shadow-xl border-radius-xl">
+                <img src="../assets/img/1.png" alt="img-blur-shadow" class="img-fluid shadow border-radius-xl">
+              </a>
+            </div>
+            <div class="card-body p-3">
+              <p class="mb-0 text-sm">Actividad #1</p>
+              <a href="javascript:;">
+                <h5>
+                  Mensaje en pagina
+                </h5>
+              </a>
+              <p class="mb-4 text-sm">
+                Conocer como vincular javascript con html para mostrar informacion en una pagina.
+              </p>
+              <div class="d-flex align-items-center justify-content-between">
+                <button type="button" class="btn btn-outline-primary btn-sm mb-0" onclick="openModal('1.html')">Ver Ejercicio</button>
+                <div class="avatar-group mt-2">
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-6 mb-xl-0 mb-4">
+          <div class="card card-blog card-plain">
+            <div class="card-header p-0 mt-n4 mx-3">
+              <a class="d-block shadow-xl border-radius-xl">
+                <img src="../assets/img/2.png" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg">
+              </a>
+            </div>
+            <div class="card-body p-3">
+              <p class="mb-0 text-sm">Actividad #2</p>
+              <a href="javascript:;">
+                <h5>
+                  Color fondo
+                </h5>
+              </a>
+              <p class="mb-4 text-sm">
+                Como interactuan con el DOM para modificar estilos usando Javascript.
+              </p>
+              <div class="d-flex align-items-center justify-content-between">
+                <button type="button" class="btn btn-outline-primary btn-sm mb-0"onclick="openModal('2.html')">Ver Ejercicio</button>
+                <div class="avatar-group mt-2">
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-6 mb-xl-0 mb-4">
+          <div class="card card-blog card-plain">
+            <div class="card-header p-0 mt-n4 mx-3">
+              <a class="d-block shadow-xl border-radius-xl">
+                <img src="../assets/img/3.png" alt="img-blur-shadow" class="img-fluid shadow border-radius-xl">
+              </a>
+            </div>
+            <div class="card-body p-3">
+              <p class="mb-0 text-sm">Actividad #3</p>
+              <a href="javascript:;">
+                <h5>
+                  Formulario simple
+                </h5>
+              </a>
+              <p class="mb-4 text-sm">
+                Aprender a validar entradas de usuarios antes de enviar el formulario.
+              </p>
+              <div class="d-flex align-items-center justify-content-between">
+                <button type="button" class="btn btn-outline-primary btn-sm mb-0"onclick="openModal('3.html')">Ver Ejercicio</button>
+                <div class="avatar-group mt-2">
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-6 mb-xl-0 mb-4">
+          <div class="card card-blog card-plain">
+            <div class="card-header p-0 mt-n4 mx-3">
+              <a class="d-block shadow-xl border-radius-xl">
+                <img src="../assets/img/4.png" alt="img-blur-shadow" class="img-fluid shadow border-radius-xl">
+              </a>
+            </div>
+            <div class="card-body p-3">
+              <p class="mb-0 text-sm">Actividad #4</p>
+              <a href="javascript:;">
+                <h5>
+                  Suma de dos numeros
+                </h5>
+              </a>
+              <p class="mb-4 text-sm">
+                Practica la captura de datos del usuario y operaciones aridmeticas.
+              </p>
+              <div class="d-flex align-items-center justify-content-between">
+                <button type="button" class="btn btn-outline-primary btn-sm mb-0"onclick="openModal('4.html')">Ver Ejercicio</button>
+                <div class="avatar-group mt-2">
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+     <!-- Del 4 al 8 -->
+    <div class="col-12 mt-4">
+      <div class="row">
+        <div class="col-xl-3 col-md-6 mb-xl-0 mb-4">
+          <div class="card card-blog card-plain">
+            <div class="card-header p-0 mt-n4 mx-3">
+              <a class="d-block shadow-xl border-radius-xl">
+                <img src="../assets/img/5.png" alt="img-blur-shadow" class="img-fluid shadow border-radius-xl">
+              </a>
+            </div>
+            <div class="card-body p-3">
+              <p class="mb-0 text-sm">Actividad #5</p>
+              <a href="javascript:;">
+                <h5>
+                  Cambio de imajen
+                </h5>
+              </a>
+              <p class="mb-4 text-sm">
+                Manipular elementos multimedia atraves de una pagina.
+              </p>
+              <div class="d-flex align-items-center justify-content-between">
+                <button type="button" class="btn btn-outline-primary btn-sm mb-0"onclick="window.open('5.html')">Ver Ejercicio</button>
+                <div class="avatar-group mt-2">
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-6 mb-xl-0 mb-4">
+          <div class="card card-blog card-plain">
+            <div class="card-header p-0 mt-n4 mx-3">
+              <a class="d-block shadow-xl border-radius-xl">
+                <img src="../assets/img/6.png" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg">
+              </a>
+            </div>
+            <div class="card-body p-3">
+              <p class="mb-0 text-sm">Actividad #6</p>
+              <a href="javascript:;">
+                <h5>
+                  Temporizador
+                </h5>
+              </a>
+              <p class="mb-4 text-sm">
+                Introducir el uso del setTimeout y setinterval en javascript.
+              </p>
+              <div class="d-flex align-items-center justify-content-between">
+                <button type="button" class="btn btn-outline-primary btn-sm mb-0"onclick="openModal('6.html')">Ver Ejercicio</button>
+                <div class="avatar-group mt-2">
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-6 mb-xl-0 mb-4">
+          <div class="card card-blog card-plain">
+            <div class="card-header p-0 mt-n4 mx-3">
+              <a class="d-block shadow-xl border-radius-xl">
+                <img src="../assets/img/7.1.png" alt="img-blur-shadow" class="img-fluid shadow border-radius-xl">
+              </a>
+            </div>
+            <div class="card-body p-3">
+              <p class="mb-0 text-sm">Actividad #7</p>
+              <a href="javascript:;">
+                <h5>
+                  Lista de tareas
+                </h5>
+              </a>
+              <p class="mb-4 text-sm">
+                trabaja con arrays, manipulando el DOM y eventos.
+              </p>
+              <div class="d-flex align-items-center justify-content-between">
+                <button type="button" class="btn btn-outline-primary btn-sm mb-0"onclick="openModal('7.html')">Ver Ejercicio</button>
+                <div class="avatar-group mt-2">
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-6 mb-xl-0 mb-4">
+          <div class="card card-blog card-plain">
+            <div class="card-header p-0 mt-n4 mx-3">
+              <a class="d-block shadow-xl border-radius-xl">
+                <img src="../assets/img/8.png" alt="img-blur-shadow" class="img-fluid shadow border-radius-xl">
+              </a>
+            </div>
+            <div class="card-body p-3">
+              <p class="mb-0 text-sm">Project #8</p>
+              <a href="javascript:;">
+                <h5>
+                  Juego piedra, papel o tijera
+                </h5>
+              </a>
+              <p class="mb-4 text-sm">
+                manipulacion de logica de juegos y eventos.
+              </p>
+              <div class="d-flex align-items-center justify-content-between">
+                <button type="button" class="btn btn-outline-primary btn-sm mb-0"onclick="openModal('8.html')">Ver Ejercicio</button>
+                <div class="avatar-group mt-2">
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+     <!-- Del 8 al 12 -->
+     <div class="col-12 mt-4">
+      <div class="row">
+        <div class="col-xl-3 col-md-6 mb-xl-0 mb-4">
+          <div class="card card-blog card-plain">
+            <div class="card-header p-0 mt-n4 mx-3">
+              <a class="d-block shadow-xl border-radius-xl">
+                <img src="../assets/img/9.1.png" alt="img-blur-shadow" class="img-fluid shadow border-radius-xl">
+              </a>
+            </div>
+            <div class="card-body p-3">
+              <p class="mb-0 text-sm">Actividad #9</p>
+              <a href="javascript:;">
+                <h5>
+                  Filtro de busqueda
+                </h5>
+              </a>
+              <p class="mb-4 text-sm">
+                introducir la manipulacion de tablas y filtrado dinamico.
+              </p>
+              <div class="d-flex align-items-center justify-content-between">
+                <button type="button" class="btn btn-outline-primary btn-sm mb-0"onclick="openModal('9.html')">Ver Ejercicio</button>
+                <div class="avatar-group mt-2">
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-6 mb-xl-0 mb-4">
+          <div class="card card-blog card-plain">
+            <div class="card-header p-0 mt-n4 mx-3">
+              <a class="d-block shadow-xl border-radius-xl">
+                <img src="../assets/img/10.png" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg">
+              </a>
+            </div>
+            <div class="card-body p-3">
+              <p class="mb-0 text-sm">Actividad #10</p>
+              <a href="javascript:;">
+                <h5>
+                  Galeria de imajenes con modal
+                </h5>
+              </a>
+              <p class="mb-4 text-sm">
+                manipula imajenes y creea ventanas modales en javascript.
+              </p>
+              <div class="d-flex align-items-center justify-content-between">
+                <button type="button" class="btn btn-outline-primary btn-sm mb-0"onclick="openModal('10.html')">Ver Ejercicio</button>
+                <div class="avatar-group mt-2">
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-6 mb-xl-0 mb-4">
+          <div class="card card-blog card-plain">
+            <div class="card-header p-0 mt-n4 mx-3">
+              <a class="d-block shadow-xl border-radius-xl">
+                <img src="../assets/img/11.png" alt="img-blur-shadow" class="img-fluid shadow border-radius-xl">
+              </a>
+            </div>
+            <div class="card-body p-3">
+              <p class="mb-0 text-sm">Actividad #11</p>
+              <a href="javascript:;">
+                <h5>
+                  Calculadora basica
+                </h5>
+              </a>
+              <p class="mb-4 text-sm">
+                aplica logica matematica en javascript y manipulacion de eventos para creear una calculadora funcional.
+              </p>
+              <div class="d-flex align-items-center justify-content-between">
+                <button type="button" class="btn btn-outline-primary btn-sm mb-0"onclick="openModal('11.html')">Ver Ejercicio</button>
+                <div class="avatar-group mt-2">
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-6 mb-xl-0 mb-4">
+          <div class="card card-blog card-plain">
+            <div class="card-header p-0 mt-n4 mx-3">
+              <a class="d-block shadow-xl border-radius-xl">
+                <img src="../assets/img/12.png" alt="img-blur-shadow" class="img-fluid shadow border-radius-xl">
+              </a>
+            </div>
+            <div class="card-body p-3">
+              <p class="mb-0 text-sm">Actividad #12</p>
+              <a href="javascript:;">
+                <h5>
+                  Convertidor de unidades
+                </h5>
+              </a>
+              <p class="mb-4 text-sm">
+                crea un convertidor de unidades entre metros, kilometros y millas.
+              </p>
+              <div class="d-flex align-items-center justify-content-between">
+                <button type="button" class="btn btn-outline-primary btn-sm mb-0"onclick="openModal('12.html')">Ver Ejercicio</button>
+                <div class="avatar-group mt-2">
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+     <!-- Del 12 al 16 -->
+     <div class="col-12 mt-4">
+      <div class="row">
+        <div class="col-xl-3 col-md-6 mb-xl-0 mb-4">
+          <div class="card card-blog card-plain">
+            <div class="card-header p-0 mt-n4 mx-3">
+              <a class="d-block shadow-xl border-radius-xl">
+                <img src="../assets/img/13.png" alt="img-blur-shadow" class="img-fluid shadow border-radius-xl">
+              </a>
+            </div>
+            <div class="card-body p-3">
+              <p class="mb-0 text-sm">Actividad #13</p>
+              <a href="javascript:;">
+                <h5>
+                  Contador de palabras
+                </h5>
+              </a>
+              <p class="mb-4 text-sm">
+                Manipular el texto de una area de texto y contar la cantidad de palabras y caracteristicas que contiene.
+              </p>
+              <div class="d-flex align-items-center justify-content-between">
+                <button type="button" class="btn btn-outline-primary btn-sm mb-0"onclick="openModal('13.html')">Ver Ejercicio</button>
+                <div class="avatar-group mt-2">
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-6 mb-xl-0 mb-4">
+          <div class="card card-blog card-plain">
+            <div class="card-header p-0 mt-n4 mx-3">
+              <a class="d-block shadow-xl border-radius-xl">
+                <img src="../assets/img/14.png" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg">
+              </a>
+            </div>
+            <div class="card-body p-3">
+              <p class="mb-0 text-sm">Actividad #14</p>
+              <a href="javascript:;">
+                <h5>
+                  Cronometro
+                </h5>
+              </a>
+              <p class="mb-4 text-sm">
+                Crea un cronometro funcional utilizando el objeto setinterval para contar el tiempo.
+              </p>
+              <div class="d-flex align-items-center justify-content-between">
+                <button type="button" class="btn btn-outline-primary btn-sm mb-0"onclick="openModal('14.html')">Ver Ejercicio</button>
+                <div class="avatar-group mt-2">
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-6 mb-xl-0 mb-4">
+          <div class="card card-blog card-plain">
+            <div class="card-header p-0 mt-n4 mx-3">
+              <a class="d-block shadow-xl border-radius-xl">
+                <img src="../assets/img/15.png" alt="img-blur-shadow" class="img-fluid shadow border-radius-xl">
+              </a>
+            </div>
+            <div class="card-body p-3">
+              <p class="mb-0 text-sm">Actividad #15</p>
+              <a href="javascript:;">
+                <h5>
+                  Galeria de imajenes usando API
+                </h5>
+              </a>
+              <p class="mb-4 text-sm">
+                Creea una galeria de imajenes utilizando la API de Unsplash para obtener imajenes aleatorias.
+              </p>
+              <div class="d-flex align-items-center justify-content-between">
+                <button type="button" class="btn btn-outline-primary btn-sm mb-0"onclick="openModal('15.html')">Ver Ejercicio</button>
+                <div class="avatar-group mt-2">
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-6 mb-xl-0 mb-4">
+          <div class="card card-blog card-plain">
+            <div class="card-header p-0 mt-n4 mx-3">
+              <a class="d-block shadow-xl border-radius-xl">
+                <img src="../assets/img/16.png" alt="img-blur-shadow" class="img-fluid shadow border-radius-xl">
+              </a>
+            </div>
+            <div class="card-body p-3">
+              <p class="mb-0 text-sm">Actividad #16</p>
+              <a href="javascript:;">
+                <h5>
+                  guardar notas
+                </h5>
+              </a>
+              <p class="mb-4 text-sm">
+                Creea una applicacion de notas donde las notas se guarden en localstorange y se cargan automaticamente.
+              </p>
+              <div class="d-flex align-items-center justify-content-between">
+                <button type="button" class="btn btn-outline-primary btn-sm mb-0"onclick="openModal('16.html')">Ver Ejercicio</button>
+                <div class="avatar-group mt-2">
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+        <!-- Modal -->
+    <div id="exerciseModal" class="modal">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <!-- Botón de cerrar "X" -->
+              <span class="close" onclick="closeModal()">&times;</span>
+
+              <!-- Aquí se mostrará el contenido del archivo -->
+              <div id="modalContent" class="modal-body">
+                  <!-- El contenido se cargará aquí -->
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <script>
+      function openModal(fileName) {
+        document.getElementById('exerciseModal').style.display = 'block';
+    
+        fetch(fileName)
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('modalContent').innerHTML = data;
+    
+                // Ejecutar scripts manualmente si es necesario
+                const scriptTags = document.getElementById('modalContent').getElementsByTagName('script');
+                for (let i = 0; i < scriptTags.length; i++) {
+                    const scriptTag = document.createElement('script');
+                    scriptTag.text = scriptTags[i].innerText;
+                    document.body.appendChild(scriptTag);
+                }
+            });
+      }
+    
+      // Función para cerrar el modal
+      function closeModal() {
+        document.getElementById('exerciseModal').style.display = 'none';
+      }
+    
+      // Cerrar el modal al hacer clic fuera de la caja del modal
+      document.querySelector('.modal').addEventListener('click', function(event) {
+        const modalDialog = document.querySelector('.modal-dialog');
+        if (!modalDialog.contains(event.target)) {
+          closeModal();
+        }
+      });
+    </script>
+
+    <style>
+      /* Estilos del modal */
+      .modal {
+          display: none;
+          position: fixed;
+          z-index: 1;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          overflow: auto;
+          background-color: rgba(0,0,0,0.4); /* Fondo semitransparente */
+      }
+
+      .modal-dialog {
+          position: relative;
+          margin: auto;
+          top: 20%;
+          padding: 0;
+      }
+
+      .close {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          color: #aaa;
+          font-size: 28px;
+          font-weight: bold;
+      }
+
+      .close:hover,
+      .close:focus {
+          color: black;
+          text-decoration: none;
+          cursor: pointer;
+      }
+
+      /* Estilo del contenido */
+      .modal-body {
+          padding: 20px;
+          background-color: white;
+          overflow-y: auto;
+      }
+    </style>
+
+
+  </main>
+  
+   
+</body>
+
+</html>

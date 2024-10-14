@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piedra, Papel o Tijera</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Piedra, Papel o Tijera</h1>
+        <div>
+            <button onclick="play('piedra')">Piedra</button>
+            <button onclick="play('papel')">Papel</button>
+            <button onclick="play('tijera')">Tijera</button>
+        </div>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        // Función principal para jugar
+        function play(userChoice) {
+            const choices = ['piedra', 'papel', 'tijera'];
+            const computerChoice = choices[Math.floor(Math.random() * 3)];
+            let result = '';
+
+            // Lógica del juego
+            if (userChoice === computerChoice) {
+                result = 'Empate';
+            } else if (
+                (userChoice === 'piedra' && computerChoice === 'tijera') ||
+                (userChoice === 'papel' && computerChoice === 'piedra') ||
+                (userChoice === 'tijera' && computerChoice === 'papel')
+            ) {
+                result = '¡Ganaste!';
+            } else {
+                result = 'Perdiste';
+            }
+
+            // Mostrar el resultado
+            document.getElementById('result').innerText = `Tú: ${userChoice} - Computadora: ${computerChoice}\n${result}`;
+        }
+    </script>
+</body>
+</html>

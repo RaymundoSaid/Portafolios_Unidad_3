@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escribe lo que piensas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        textarea {
+            width: 80%;
+            height: 150px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+            resize: none;
+        }
+
+        .counter {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Escribe lo que piensas</h1>
+    <textarea id="texto" oninput="contar()"></textarea>
+    <div class="counter">
+        Palabras: <span id="palabras">0</span> | Caracteres: <span id="caracteres">0</span>
+    </div>
+
+    <script>
+        function contar() {
+            let texto = document.getElementById("texto").value;
+            
+            // Contar palabras
+            let palabras = texto.trim().split(/\s+/).filter(Boolean).length;
+            
+            // Contar caracteres sin espacios
+            let caracteres = texto.replace(/\s+/g, '').length;
+
+            document.getElementById("palabras").textContent = palabras;
+            document.getElementById("caracteres").textContent = caracteres;
+        }
+    </script>
+
+</body>
+</html>

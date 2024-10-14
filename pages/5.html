@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar Imagen Aleatoriamente</title>
+    <script>
+        // Array que contiene las rutas de las imágenes en la carpeta
+        const imagenes = [
+            'C:/Users/raysa/OneDrive/Imágenes/Capturas de pantalla/1.png',
+            'C:/Users/raysa/OneDrive/Imágenes/Capturas de pantalla/2.png',
+            'C:/Users/raysa/OneDrive/Imágenes/Capturas de pantalla/3.png',
+            'C:/Users/raysa/OneDrive/Imágenes/Capturas de pantalla/4.png',
+            'C:/Users/raysa/OneDrive/Imágenes/Capturas de pantalla/5.png',
+            'C:/Users/raysa/OneDrive/Imágenes/Capturas de pantalla/6.png',
+            'C:/Users/raysa/OneDrive/Imágenes/Capturas de pantalla/7.png',
+            'C:/Users/raysa/OneDrive/Imágenes/Capturas de pantalla/8.png',
+            'C:/Users/raysa/OneDrive/Imágenes/Capturas de pantalla/9.png',
+            
+            // Agrega más rutas de imágenes según sea necesario
+        ];
+
+        // Función que selecciona una imagen aleatoria y la muestra
+        function cambiarImagen() {
+            const indiceAleatorio = Math.floor(Math.random() * imagenes.length);
+            document.getElementById('imagen').src = imagenes[indiceAleatorio];
+        }
+    </script>
+</head>
+<body>
+    <!-- Imagen inicial mostrada en la página -->
+    <img id="imagen" src="C:/Users/raysa/OneDrive/Imágenes/Capturas de pantalla/1.png" alt="Imagen" width="300">
+    <br>
+    <!-- Botón que llama a la función cambiarImagen() al hacer clic -->
+    <button onclick="cambiarImagen()">Cambiar Imagen</button>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temporizador de Cuenta Regresiva</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+        #temporizador {
+            font-size: 5em;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1.5em;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        // Función que inicia el temporizador de cuenta regresiva
+        function iniciarTemporizador(duracion) {
+            let tiempoRestante = duracion;
+            const display = document.getElementById('temporizador');
+
+            // setInterval se usa para actualizar el temporizador cada segundo
+            const intervalo = setInterval(() => {
+                const minutos = Math.floor(tiempoRestante / 60);
+                const segundos = tiempoRestante % 60;
+
+                // Mostrar el tiempo en formato mm:ss
+                display.textContent = `${minutos}:${segundos < 10 ? '0' : ''}${segundos}`;
+
+                // Reducir el tiempo restante
+                tiempoRestante--;
+
+                // Detener el temporizador cuando llegue a 0
+                if (tiempoRestante < 0) {
+                    clearInterval(intervalo);
+                    display.textContent = "¡Tiempo terminado!";
+                }
+            }, 1000); // Intervalo de 1 segundo
+        }
+
+        // Función que se llama al hacer clic en el botón para iniciar el temporizador
+        function iniciar() {
+            // setTimeout se usa para iniciar el temporizador después de un retraso opcional
+            setTimeout(() => {
+                iniciarTemporizador(50);
+            }, 0); // Sin retraso en este caso
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div id="temporizador">0:50</div>
+        <button onclick="iniciar()">Iniciar Temporizador</button>
+    </div>
+</body>
+</html>

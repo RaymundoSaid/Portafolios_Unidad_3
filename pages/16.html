@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicación de Notas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #e8f5e9;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #388e3c;
+        }
+        .note-container {
+            width: 100%;
+            max-width: 600px;
+            margin-top: 20px;
+        }
+        .note {
+            background-color: #c8e6c9;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .note p {
+            margin: 0;
+        }
+        .note button {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            padding: 5px 10px;
+        }
+        .note button:hover {
+            background-color: #d32f2f;
+        }
+        input[type="text"] {
+            width: 100%;
+            max-width: 600px;
+            padding: 10px;
+            margin-top: 20px;
+            border: 1px solid #388e3c;
+            border-radius: 4px;
+        }
+        button.add-note {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #388e3c;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button.add-note:hover {
+            background-color: #2e7d32;
+        }
+    </style>
+</head>
+<body>
+    <h1>Aplicación de Notas</h1>
+    <input type="text" id="noteInput" placeholder="Escribe una nota...">
+    <button class="add-note" onclick="addNote()">Agregar Nota</button>
+    <div class="note-container" id="noteContainer"></div>
+
+    <script>
+        function getNotes() {
+            return JSON.parse(localStorage.getItem('notes')) || [];
+        }
+
+        function saveNotes(notes) {
+            localStorage.setItem('notes', JSON.stringify(notes));
+        }
+
+        function addNote() {
+            const noteInput = document.getElementById('noteInput');
+            const noteText = noteInput.value.trim();
+            if (noteText) {
+                const notes = getNotes();
+                notes.push(noteText);
+                saveNotes(notes);
+                renderNotes();
+                noteInput.value = '';
+            }
+        }
+
+        function deleteNote(index) {
+            const notes = getNotes();
+            notes.splice(index, 1);
+            saveNotes(notes);
+            renderNotes();
+        }
+
+        function renderNotes() {
+            const notes = getNotes();
+            const noteContainer = document.getElementById('noteContainer');
+            noteContainer.innerHTML = '';
+            notes.forEach((note, index) => {
+                const noteElement = document.createElement('div');
+                noteElement.className = 'note';
+                noteElement.innerHTML = `<p>${note}</p><button onclick="deleteNote(${index})">Eliminar</button>`;
+                noteContainer.appendChild(noteElement);
+            });
+        }
+
+        // Render notes on page load
+        renderNotes();
+    </script>
+</body>
+</html>
